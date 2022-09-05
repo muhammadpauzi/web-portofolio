@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 import { HeartIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 
 const navigation = [
@@ -152,7 +153,7 @@ export default function Home() {
           <hr className="w-12 my-6 rounded-lg h-[3px] bg-slate-200 border-none block" />
 
           <h1 className="leading-snug md:leading-[1.2] text-3xl md:text-4xl font-extrabold font-slab mb-5 block text-slate-900">
-            <img
+            <Image
               src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430"
               className="inline-block md:-ml-[3.6rem] mr-2"
               width="50"
@@ -165,12 +166,12 @@ export default function Home() {
 
           <div className="font-slab text-slate-700 text-lg space-y-5 leading-[1.8]">
             <p>
-              Hello, My name's{" "}
+              Hello, My name{"'"}s{" "}
               <span className="text-[#4630FF] underline underline-offset-2">
                 Muhammad Pauzi
               </span>{" "}
               and i am a Full-stack Web Developer. I was born and live in{" "}
-              <img
+              <Image
                 src="https://cdn-icons-png.flaticon.com/512/323/323372.png"
                 width="20"
                 className="my-0 mx-2 p-0 inline-block"
@@ -178,7 +179,7 @@ export default function Home() {
               <span className="text-[#4630FF] underline underline-offset-2">
                 Langkat, North Sumatera, Indonesia
               </span>{" "}
-              I've been studying programming since 16 years old. I already
+              I{"'"}ve been studying programming since 16 years old. I already
               understand several programming languages, frameworks and more that
               have been implemented in some of my projects which can be seen in
               the below this section.
@@ -215,19 +216,19 @@ export default function Home() {
             </h4>
 
             <p className="flex items-center gap-1 flex-wrap">
-              <img
+              <Image
                 alt="JavaScript"
                 src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
               />
-              <img
+              <Image
                 alt="PHP"
                 src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"
               />
-              <img
+              <Image
                 alt="TypeScript"
                 src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
               />
-              <img
+              <Image
                 alt="Python"
                 src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"
               />
@@ -238,80 +239,80 @@ export default function Home() {
             </h4>
 
             <p className="flex items-center gap-1 flex-wrap">
-              <img
+              <Image
                 alt="HTML5"
                 src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
               />
-              <img
+              <Image
                 alt="Bootstrap CSS"
                 src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"
               />
-              <img
+              <Image
                 alt="Tailwind CSS"
                 src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
               />
-              <img
+              <Image
                 alt="JSON"
                 src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white"
               />
-              <img
+              <Image
                 alt="React JS"
                 src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
               />
-              <img
+              <Image
                 alt="Svelte JS"
                 src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white"
               />
-              <img
+              <Image
                 alt="SASS"
                 src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"
               />
-              <img
+              <Image
                 alt="Vite JS"
                 src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E"
               />
-              <img
+              <Image
                 alt="Alphine JS"
                 src="https://img.shields.io/badge/AlpineJS-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=black"
               />
-              <img
+              <Image
                 alt="Next JS"
                 src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"
               />
-              <img
+              <Image
                 alt="JQuery"
                 src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"
               />
-              <img
+              <Image
                 alt="Yarn"
                 src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white"
               />
               <br />
-              <img
+              <Image
                 alt="Laravel"
                 src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white"
               />
-              <img
+              <Image
                 alt="Livewire"
                 src="https://img.shields.io/badge/livewire-4e56a6?style=for-the-badge&logo=livewire&logoColor=white"
               />
-              <img
+              <Image
                 alt="CodeIgniter"
                 src="https://img.shields.io/badge/Codeigniter-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white"
               />
-              <img
+              <Image
                 alt="Composer"
                 src="https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=Composer&logoColor=white"
               />
-              <img
+              <Image
                 alt="Express JS"
                 src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
               />
-              <img
+              <Image
                 alt="Node JS"
                 src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
               />
-              <img
+              <Image
                 alt="Flask"
                 src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
               />
@@ -322,19 +323,19 @@ export default function Home() {
             </h4>
 
             <p className="flex items-center gap-1 flex-wrap">
-              <img
+              <Image
                 alt="MYSQL"
                 src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white"
               />
-              <img
+              <Image
                 alt="MongoDB"
                 src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"
               />
-              <img
+              <Image
                 alt="SQLite"
                 src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white"
               />
-              <img
+              <Image
                 alt="MariaDB"
                 src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"
               />
@@ -345,27 +346,27 @@ export default function Home() {
             </h4>
 
             <p className="flex items-center gap-1 flex-wrap">
-              <img
+              <Image
                 alt="GIT"
                 src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"
               />
-              <img
+              <Image
                 alt="GitHub"
                 src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
               />
-              <img
+              <Image
                 alt="Linux"
                 src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
               />
-              <img
+              <Image
                 alt="Ubuntu"
                 src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"
               />
-              <img
+              <Image
                 alt="VSCode"
                 src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"
               />
-              <img
+              <Image
                 alt="GitLab"
                 src="https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white"
               />
@@ -376,19 +377,19 @@ export default function Home() {
             </h4>
 
             <p className="flex items-center gap-1 flex-wrap">
-              <img
+              <Image
                 alt="Adobe Ilustrator"
                 src="https://img.shields.io/badge/Adobe%20Illustrator-FF9A00?style=for-the-badge&logo=adobe%20illustrator&logoColor=white"
               />
-              <img
+              <Image
                 alt="Adobe XD"
                 src="https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6"
               />
-              <img
+              <Image
                 alt="Adobe Photoshop"
                 src="https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black"
               />
-              <img
+              <Image
                 alt="Figma"
                 src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
               />
@@ -419,6 +420,7 @@ export default function Home() {
                 Email :{" "}
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
                   href="mailto:muhammadpauzi200@gmail.com"
                 >
@@ -429,6 +431,7 @@ export default function Home() {
                 Telegram :{" "}
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
                   href="https://t.me/mhdpauzi"
                 >
@@ -439,6 +442,7 @@ export default function Home() {
                 WhatsApp :{" "}
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
                   href="https://wa.me/082165688820"
                 >
@@ -449,6 +453,7 @@ export default function Home() {
                 GitHub :{" "}
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
                   href="https://github.com/muhammadpauzi"
                 >
@@ -459,6 +464,7 @@ export default function Home() {
                 LinkedIn :{" "}
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
                   href="http://www.linkedin.com/in/muhammad-pauzi-756a1021b"
                 >
@@ -469,6 +475,7 @@ export default function Home() {
                 LinkedIn :{" "}
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
                   href="https://www.instagram.com/mhdpauzi_"
                 >
