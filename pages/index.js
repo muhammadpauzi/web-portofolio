@@ -59,9 +59,10 @@ export default function Home() {
 
             <div className="hidden md:block">
               <ul className="flex items-center gap-8">
-                {navigation.map((nav) => (
+                {navigation.map((nav, i) => (
                   <li>
                     <a
+                      key={i}
                       className="transition hover:text-[#4630FF] hover:underline hover:underline-offset-4"
                       href={nav.href}
                     >
@@ -85,9 +86,10 @@ export default function Home() {
             >
               <div className="block md:hidden absolute top-0 left-0 w-full bg-white border border-slate-200 rounded-md p-7 mt-5">
                 <ul className="space-y-4">
-                  {navigation.map((nav) => (
+                  {navigation.map((nav, i) => (
                     <li className="text-lg">
                       <a
+                        key={i}
                         className="transition hover:text-[#4630FF] hover:underline hover:underline-offset-4"
                         href={nav.href}
                         onClick={() => setShowMobileNav(false)}
