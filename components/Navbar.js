@@ -59,7 +59,9 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <ThemeToggle />
+            <div className="ml-8">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ export default function Home() {
             </h1>
 
             <p className="font-slab dark:text-slate-300 text-slate-700 text-lg">
-              I am a full stack web developer who can make a good website to
+              I am a full stack web developer who can make a great website to
               help make your work easier.
             </p>
           </div>
@@ -425,7 +425,7 @@ export default function Home() {
       >
         <a
           href="#home"
-          className="h-[50px] w-[50px] grid place-content-center backdrop-blur-md bg-[#b3adf050] fixed hover:shadow-xl transition hover:shadow-[#4530ff29] dark:hover:shadow-none bottom-5 right-5 rounded-full"
+          className="h-[50px] w-[50px] grid place-content-center backdrop-blur-md bg-[#b3adf050] fixed hover:shadow-xl transition hover:shadow-[#4530ff29] dark:hover:shadow-none bottom-5 right-5 rounded-full md:bottom-10 md:right-36"
         >
           <ChevronUpIcon
             className="w-5 h-5 text-[#4630FF] dark:text-white"
@@ -434,21 +434,24 @@ export default function Home() {
         </a>
       </Transition>
 
-      <div className="bg-white border border-gray-100 mt-28 dark:bg-transparent dark:border-slate-800">
-        <div className="max-w-2xl mb-2 mx-auto py-10 px-3 text-center">
-          <small className="block text-md font-bold uppercase text-[#4630FF] dark:text-white mb-4 tracking-widest">
-            Thank You For Visiting My Portofolio
-          </small>
-          <p className="text-gray-500 font-slab dark:text-slate-300">
-            Develop & Designed With{" "}
-            <HeartIcon className="inline-block mx-1 text-red-600 w-6 h-6" /> By{" "}
-            <a
-              href=""
-              className="text-[#4630FF] dark:text-white underline underline-offset-2"
-            >
-              Muhammad Pauzi.
-            </a>
-          </p>
+      <div className="max-w-3xl mx-auto -mb-4">
+        <div className="bg-white border border-gray-100 mt-28 dark:bg-transparent dark:border-slate-800">
+          <div className="py-10 px-3 text-center">
+            <small className="block text-md font-bold uppercase text-[#4630FF] dark:text-white mb-4 tracking-widest">
+              Thank You For Visiting My Portofolio
+            </small>
+            <p className="text-gray-500 font-slab dark:text-slate-300">
+              Develop & Designed With{" "}
+              <HeartIcon className="inline-block mx-1 text-red-600 w-6 h-6" />{" "}
+              By{" "}
+              <a
+                href=""
+                className="text-[#4630FF] dark:text-white underline underline-offset-2"
+              >
+                Muhammad Pauzi.
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
