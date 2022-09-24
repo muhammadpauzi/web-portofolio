@@ -46,18 +46,21 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <ul className="flex items-center gap-x-6">
-            {navigation.map((nav, i) => (
-              <li key={i}>
-                <a
-                  className="transition hover:text-[#4630FF] text-[.95em] hover:underline hover:underline-offset-4 dark:text-slate-300 dark:hover:text-slate-200"
-                  href={nav.href}
-                >
-                  {nav.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center justify-between gap-2">
+            <ul className="flex items-center gap-x-6">
+              {navigation.map((nav, i) => (
+                <li key={i}>
+                  <a
+                    className="transition hover:text-[#4630FF] text-[.95em] hover:underline hover:underline-offset-4 dark:text-slate-300 dark:hover:text-slate-200"
+                    href={nav.href}
+                  >
+                    {nav.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
 
