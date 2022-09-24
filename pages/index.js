@@ -1,26 +1,17 @@
 import { Transition } from "@headlessui/react";
 import {
   ArrowRightIcon,
-  Bars3Icon,
   ChevronUpIcon,
   LinkIcon,
   PhoneIcon,
-  XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 import { HeartIcon } from "@heroicons/react/24/solid";
 import { Fragment, useEffect, useState } from "react";
-
-const navigation = [
-  { name: "Home", href: "#home", current: false },
-  { name: "About Me", href: "#about-me", current: false },
-  { name: "My Skills", href: "#my-skills", current: false },
-  { name: "My Works", href: "#my-works", current: false },
-  { name: "Contact", href: "#contact-me", current: false },
-];
+import Line from "../components/Line";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
-  const [showMobileNav, setShowMobileNav] = useState(false);
   const [showToTop, setShowToTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -34,87 +25,23 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="px-5 md:px-10 relative">
+    <div className="px-5 md:px-10 relative dark:bg-slate-900">
       <div className="min-h-[500px]" id="home">
-        <div className="py-8">
-          <div className="mx-auto max-w-4xl flex items-center justify-between font-slab">
-            <a
-              href="#home"
-              className="font-extrabold font-slab text-[#4630FF] text-2xl"
-            >
-              ZiiDev
-            </a>
-
-            <div className="block md:hidden">
-              {showMobileNav ? (
-                <button onClick={() => setShowMobileNav(false)}>
-                  <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
-                </button>
-              ) : (
-                <button onClick={() => setShowMobileNav(true)}>
-                  <Bars3Icon className="block h-7 w-7" aria-hidden="true" />
-                </button>
-              )}
-            </div>
-
-            <div className="hidden md:block">
-              <ul className="flex items-center gap-8">
-                {navigation.map((nav, i) => (
-                  <li key={i}>
-                    <a
-                      className="transition hover:text-[#4630FF] hover:underline hover:underline-offset-4"
-                      href={nav.href}
-                    >
-                      {nav.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="relative w-full block font-slab">
-            <Transition
-              as={Fragment}
-              show={showMobileNav}
-              enter="transform duration-200 transition ease-in-out"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 rotate-0 scale-100"
-              leave="transform duration-200 transition ease-in-out"
-              leaveFrom="opacity-100 rotate-0 scale-100"
-              leaveTo="opacity-0 scale-95"
-            >
-              <div className="block md:hidden absolute top-0 left-0 w-full bg-white border border-slate-200 rounded-md p-7 mt-5">
-                <ul className="space-y-4">
-                  {navigation.map((nav, i) => (
-                    <li className="text-lg" key={i}>
-                      <a
-                        className="transition hover:text-[#4630FF] hover:underline hover:underline-offset-4"
-                        href={nav.href}
-                        onClick={() => setShowMobileNav(false)}
-                      >
-                        {nav.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Transition>
-          </div>
-        </div>
+        <Navbar />
 
         <div className="max-w-3xl mx-auto py-16 text-center md:text-start">
           <span className="uppercase font-extrabold text-sm tracking-widest text-green-500 mb-4 block">
             Muhammad Pauzi
           </span>
 
-          <hr className="mx-auto md:mx-0 w-11 mt-4 mb-7 rounded-lg h-[3px] bg-slate-200 border-none block" />
+          <Line className="mx-auto md:mx-0" />
 
           <div className="mx-auto md:mx-0 w-[600px] max-w-full mb-14">
-            <h1 className="leading-snug md:leading-[1.2] text-3xl md:text-5xl font-extrabold font-slab mb-5 block text-slate-900">
+            <h1 className="dark:text-slate-200 leading-snug md:leading-[1.2] text-3xl md:text-5xl font-extrabold font-slab mb-5 block text-slate-900">
               Choose me to make a great website for you.
             </h1>
 
-            <p className="font-slab text-slate-700 text-lg">
+            <p className="font-slab dark:text-slate-300 text-slate-700 text-lg">
               I am a full stack web developer who can make a good website to
               help make your work easier.
             </p>
@@ -134,7 +61,7 @@ export default function Home() {
             </a>
             <a
               href="#my-works"
-              className="justify-center py-4 px-6 inline-flex items-center font-semibold text-base font-slab rounded-md  transition-colors text-slate-600 hover:text-[#4630FF]"
+              className="justify-center py-4 px-6 inline-flex items-center font-semibold text-base font-slab rounded-md  transition-colors text-slate-600 hover:text-[#4630FF] dark:text-white"
             >
               My Works
               <ArrowRightIcon className="w-4 h-4 ml-3 inline-block" />
@@ -149,9 +76,9 @@ export default function Home() {
             About Me
           </span>
 
-          <hr className="w-12 my-6 rounded-lg h-[3px] bg-slate-200 border-none block" />
+          <Line />
 
-          <h1 className="leading-snug md:leading-[1.2] text-3xl md:text-4xl font-extrabold font-slab mb-5 block text-slate-900">
+          <h1 className="leading-snug md:leading-[1.2] text-3xl md:text-4xl font-extrabold font-slab mb-5 block text-slate-900 dark:text-slate-200">
             <img
               src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430"
               className="inline-block md:-ml-[3.6rem] mr-2"
@@ -163,10 +90,10 @@ export default function Home() {
             </a>
           </h1>
 
-          <div className="font-slab text-slate-700 text-lg space-y-5 leading-[1.8]">
+          <div className="font-slab text-slate-700 text-lg space-y-5 leading-[1.8] dark:text-slate-300">
             <p>
               Hello, My name{"'"}s{" "}
-              <span className="text-[#4630FF] underline underline-offset-2">
+              <span className="text-[#4630FF] dark:text-white underline underline-offset-2">
                 Muhammad Pauzi
               </span>{" "}
               and i am a Full-stack Web Developer. I was born and live in{" "}
@@ -175,7 +102,7 @@ export default function Home() {
                 width="20"
                 className="my-0 mx-2 p-0 inline-block"
               />
-              <span className="text-[#4630FF] underline underline-offset-2">
+              <span className="text-[#4630FF] dark:text-white underline underline-offset-2">
                 Langkat, North Sumatera, Indonesia
               </span>{" "}
               I{"'"}ve been studying programming since 16 years old. I already
@@ -199,9 +126,9 @@ export default function Home() {
             My Skills
           </span>
 
-          <hr className="w-12 my-6 rounded-lg h-[3px] bg-slate-200 border-none block" />
+          <Line />
 
-          <h1 className="leading-snug md:leading-[1.2] text-3xl md:text-4xl font-extrabold font-slab mb-5 block text-slate-900">
+          <h1 className="leading-snug md:leading-[1.2] text-3xl md:text-4xl font-extrabold font-slab mb-5 block text-slate-900 dark:text-slate-200">
             <div className="inline-block md:-ml-[3.6rem] mr-2">🫠</div>
             Tech Stacks
             <a href="#my-skills">
@@ -209,7 +136,7 @@ export default function Home() {
             </a>
           </h1>
 
-          <div className="font-slab text-slate-700 text-lg space-y-5 leading-[1.8]">
+          <div className="font-slab text-slate-700 text-lg space-y-5 leading-[1.8] dark:text-slate-300">
             <h4>
               <b>💻 Programming Languages</b>
             </h4>
@@ -405,7 +332,7 @@ export default function Home() {
 
           <hr className="w-12 my-6 rounded-lg h-[3px] bg-slate-200 border-none block" />
 
-          <h1 className="leading-snug md:leading-[1.2] text-3xl md:text-4xl font-extrabold font-slab mb-5 block text-slate-900">
+          <h1 className="leading-snug md:leading-[1.2] text-3xl md:text-4xl font-extrabold font-slab mb-5 block text-slate-900 dark:text-slate-200">
             <span className="inline-block md:-ml-[3.6rem] mr-2">📞</span>
             Here you can find me
             <a href="#contact-me">
@@ -413,14 +340,14 @@ export default function Home() {
             </a>
           </h1>
 
-          <div className="font-slab text-slate-700 text-lg">
-            <ul className="sm:ml-4 space-y-2 text-gray-500 sm:list-disc">
+          <div className="font-slab text-lg">
+            <ul className="sm:ml-4 space-y-2 text-gray-500 dark:text-slate-300 sm:list-disc">
               <li>
                 Email :{" "}
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
+                  className="text-[#4630FF] dark:text-white underline underline-offset-2 decoration-2 decoration-[#4630FF] dark:decoration-white"
                   href="mailto:muhammadpauzi200@gmail.com"
                 >
                   muhammadpauzi200@gmail.com
@@ -431,7 +358,7 @@ export default function Home() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
+                  className="text-[#4630FF] dark:text-white underline underline-offset-2 decoration-2 decoration-[#4630FF] dark:decoration-white"
                   href="https://t.me/mhdpauzi"
                 >
                   @mhdpauzi
@@ -442,7 +369,7 @@ export default function Home() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
+                  className="text-[#4630FF] dark:text-white underline underline-offset-2 decoration-2 decoration-[#4630FF] dark:decoration-white"
                   href="https://wa.me/082165688820"
                 >
                   Muhammad Pauzi
@@ -453,7 +380,7 @@ export default function Home() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
+                  className="text-[#4630FF] dark:text-white underline underline-offset-2 decoration-2 decoration-[#4630FF] dark:decoration-white"
                   href="https://github.com/muhammadpauzi"
                 >
                   @muhammadpauzi
@@ -464,7 +391,7 @@ export default function Home() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
+                  className="text-[#4630FF] dark:text-white underline underline-offset-2 decoration-2 decoration-[#4630FF] dark:decoration-white"
                   href="http://www.linkedin.com/in/muhammad-pauzi-756a1021b"
                 >
                   Muhammad Pauzi
@@ -475,7 +402,7 @@ export default function Home() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#4630FF] underline underline-offset-2 decoration-2 decoration-[#4630FF]"
+                  className="text-[#4630FF] dark:text-white underline underline-offset-2 decoration-2 decoration-[#4630FF] dark:decoration-white"
                   href="https://www.instagram.com/mhdpauzi_"
                 >
                   @mhdpauzi_
@@ -498,21 +425,27 @@ export default function Home() {
       >
         <a
           href="#home"
-          className="h-14 w-14 grid place-content-center backdrop-blur-md bg-[#b3adf050] fixed hover:shadow-xl transition hover:shadow-[#4530ff29] bottom-8 right-8 rounded-full"
+          className="h-[50px] w-[50px] grid place-content-center backdrop-blur-md bg-[#b3adf050] fixed hover:shadow-xl transition hover:shadow-[#4530ff29] dark:hover:shadow-none bottom-5 right-5 rounded-full"
         >
-          <ChevronUpIcon className="w-5 h-5 text-[#4630FF]" strokeWidth={3} />
+          <ChevronUpIcon
+            className="w-5 h-5 text-[#4630FF] dark:text-white"
+            strokeWidth={3}
+          />
         </a>
       </Transition>
 
-      <div className="bg-white border border-gray-100 mt-28">
-        <div className="max-w-2xl mx-auto py-10 px-3 text-center">
-          <small className="block text-md font-bold uppercase text-[#4630FF] mb-4 tracking-widest">
+      <div className="bg-white border border-gray-100 mt-28 dark:bg-transparent dark:border-slate-800">
+        <div className="max-w-2xl mb-2 mx-auto py-10 px-3 text-center">
+          <small className="block text-md font-bold uppercase text-[#4630FF] dark:text-white mb-4 tracking-widest">
             Thank You For Visiting My Portofolio
           </small>
-          <p className="text-gray-500 font-slab">
-            Develeop & Designed With{" "}
+          <p className="text-gray-500 font-slab dark:text-slate-300">
+            Develop & Designed With{" "}
             <HeartIcon className="inline-block mx-1 text-red-600 w-6 h-6" /> By{" "}
-            <a href="" className="text-[#4630FF] underline underline-offset-2">
+            <a
+              href=""
+              className="text-[#4630FF] dark:text-white underline underline-offset-2"
+            >
               Muhammad Pauzi.
             </a>
           </p>
