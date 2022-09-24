@@ -398,7 +398,7 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                LinkedIn :{" "}
+                Instagram :{" "}
                 <a
                   target="_blank"
                   rel="noreferrer"
