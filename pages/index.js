@@ -370,7 +370,7 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#4630FF] dark:text-white underline underline-offset-2 decoration-2 decoration-[#4630FF] dark:decoration-white"
-                  href="https://wa.me/082165688820"
+                  href="https://wa.me/6282165688820"
                 >
                   Muhammad Pauzi
                 </a>
